@@ -1,0 +1,92 @@
+[
+{
+  "directory": "/home/josephpei/workspace/c/numbdb/build",
+  "command": "/usr/bin/cc    -O2 -Wall   --std=c99 -pthread -o CMakeFiles/numbdb.dir/numbdb.c.o   -c /home/josephpei/workspace/c/numbdb/numbdb.c",
+  "file": "/home/josephpei/workspace/c/numbdb/numbdb.c"
+},
+{
+  "directory": "/home/josephpei/workspace/c/numbdb/build",
+  "command": "/usr/bin/cc    -O2 -Wall   --std=c99 -pthread -o CMakeFiles/numbdb.dir/ae.c.o   -c /home/josephpei/workspace/c/numbdb/ae.c",
+  "file": "/home/josephpei/workspace/c/numbdb/ae.c"
+},
+{
+  "directory": "/home/josephpei/workspace/c/numbdb/build",
+  "command": "/usr/bin/cc    -O2 -Wall   --std=c99 -pthread -o CMakeFiles/numbdb.dir/anet.c.o   -c /home/josephpei/workspace/c/numbdb/anet.c",
+  "file": "/home/josephpei/workspace/c/numbdb/anet.c"
+},
+{
+  "directory": "/home/josephpei/workspace/c/numbdb/build",
+  "command": "/usr/bin/cc    -O2 -Wall   --std=c99 -pthread -o CMakeFiles/numbdb.dir/dict.c.o   -c /home/josephpei/workspace/c/numbdb/dict.c",
+  "file": "/home/josephpei/workspace/c/numbdb/dict.c"
+},
+{
+  "directory": "/home/josephpei/workspace/c/numbdb/build",
+  "command": "/usr/bin/cc    -O2 -Wall   --std=c99 -pthread -o CMakeFiles/numbdb.dir/sds.c.o   -c /home/josephpei/workspace/c/numbdb/sds.c",
+  "file": "/home/josephpei/workspace/c/numbdb/sds.c"
+},
+{
+  "directory": "/home/josephpei/workspace/c/numbdb/build",
+  "command": "/usr/bin/cc    -O2 -Wall   --std=c99 -pthread -o CMakeFiles/numbdb.dir/zmalloc.c.o   -c /home/josephpei/workspace/c/numbdb/zmalloc.c",
+  "file": "/home/josephpei/workspace/c/numbdb/zmalloc.c"
+},
+{
+  "directory": "/home/josephpei/workspace/c/numbdb/build",
+  "command": "/usr/bin/cc    -O2 -Wall   --std=c99 -o CMakeFiles/numbdb-cli.dir/numbdb-cli.c.o   -c /home/josephpei/workspace/c/numbdb/numbdb-cli.c",
+  "file": "/home/josephpei/workspace/c/numbdb/numbdb-cli.c"
+},
+{
+  "directory": "/home/josephpei/workspace/c/numbdb/build",
+  "command": "/usr/bin/cc    -O2 -Wall   --std=c99 -o CMakeFiles/numbdb-cli.dir/sds.c.o   -c /home/josephpei/workspace/c/numbdb/sds.c",
+  "file": "/home/josephpei/workspace/c/numbdb/sds.c"
+},
+{
+  "directory": "/home/josephpei/workspace/c/numbdb/build",
+  "command": "/usr/bin/cc    -O2 -Wall   --std=c99 -o CMakeFiles/numbdb-cli.dir/zmalloc.c.o   -c /home/josephpei/workspace/c/numbdb/zmalloc.c",
+  "file": "/home/josephpei/workspace/c/numbdb/zmalloc.c"
+},
+{
+  "directory": "/home/josephpei/workspace/c/numbdb/build/tests",
+  "command": "/usr/bin/cc    -O2 -Wall   --std=c99 -o CMakeFiles/test_dict.dir/test_dict.c.o   -c /home/josephpei/workspace/c/numbdb/tests/test_dict.c",
+  "file": "/home/josephpei/workspace/c/numbdb/tests/test_dict.c"
+},
+{
+  "directory": "/home/josephpei/workspace/c/numbdb/build/tests",
+  "command": "/usr/bin/cc    -O2 -Wall   --std=c99 -o CMakeFiles/test_dict.dir/__/dict.c.o   -c /home/josephpei/workspace/c/numbdb/dict.c",
+  "file": "/home/josephpei/workspace/c/numbdb/dict.c"
+},
+{
+  "directory": "/home/josephpei/workspace/c/numbdb/build/tests",
+  "command": "/usr/bin/cc    -O2 -Wall   --std=c99 -o CMakeFiles/test_dict.dir/__/zmalloc.c.o   -c /home/josephpei/workspace/c/numbdb/zmalloc.c",
+  "file": "/home/josephpei/workspace/c/numbdb/zmalloc.c"
+},
+{
+  "directory": "/home/josephpei/workspace/c/numbdb/build/tests",
+  "command": "/usr/bin/cc    -O2 -Wall   --std=c99 -o CMakeFiles/test_fe.dir/test_fe.c.o   -c /home/josephpei/workspace/c/numbdb/tests/test_fe.c",
+  "file": "/home/josephpei/workspace/c/numbdb/tests/test_fe.c"
+},
+{
+  "directory": "/home/josephpei/workspace/c/numbdb/build/tests",
+  "command": "/usr/bin/cc    -O2 -Wall   --std=c99 -o CMakeFiles/test_fe.dir/__/ae.c.o   -c /home/josephpei/workspace/c/numbdb/ae.c",
+  "file": "/home/josephpei/workspace/c/numbdb/ae.c"
+},
+{
+  "directory": "/home/josephpei/workspace/c/numbdb/build/tests",
+  "command": "/usr/bin/cc    -O2 -Wall   --std=c99 -o CMakeFiles/test_fe.dir/__/zmalloc.c.o   -c /home/josephpei/workspace/c/numbdb/zmalloc.c",
+  "file": "/home/josephpei/workspace/c/numbdb/zmalloc.c"
+},
+{
+  "directory": "/home/josephpei/workspace/c/numbdb/build/tests",
+  "command": "/usr/bin/cc    -O2 -Wall   --std=c99 -o CMakeFiles/test_sds.dir/test_sds.c.o   -c /home/josephpei/workspace/c/numbdb/tests/test_sds.c",
+  "file": "/home/josephpei/workspace/c/numbdb/tests/test_sds.c"
+},
+{
+  "directory": "/home/josephpei/workspace/c/numbdb/build/tests",
+  "command": "/usr/bin/cc    -O2 -Wall   --std=c99 -o CMakeFiles/test_sds.dir/__/sds.c.o   -c /home/josephpei/workspace/c/numbdb/sds.c",
+  "file": "/home/josephpei/workspace/c/numbdb/sds.c"
+},
+{
+  "directory": "/home/josephpei/workspace/c/numbdb/build/tests",
+  "command": "/usr/bin/cc    -O2 -Wall   --std=c99 -o CMakeFiles/test_sds.dir/__/zmalloc.c.o   -c /home/josephpei/workspace/c/numbdb/zmalloc.c",
+  "file": "/home/josephpei/workspace/c/numbdb/zmalloc.c"
+}
+]
