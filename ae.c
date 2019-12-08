@@ -3,11 +3,19 @@
 #include <sys/time.h>
 #include <sys/types.h>
 #include <unistd.h>
-#include <sys/epoll.h>
 
 #include "ae.h"
 #include "zmalloc.h"
+
+#ifdef HAVE_EPOLL
 #include "ae_epoll.c"
+#else
+    #ifdef HAVE_KQUEUE
+    #include "ae_kqueue.c"
+    #else
+    #include "ae_select.c"
+    #endif
+#endif
 
 
 aeEventLoop *aeCreateEventLoop(void) {
