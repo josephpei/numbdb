@@ -79,6 +79,7 @@ void *dictFetchValue(dict *d, const void *key);
 dictIterator *dictGetIterator(dict *d);
 dictEntry *dictNext(dictIterator *iter);
 void dictReleaseIterator(dictIterator *iter);
+int dictRehash(dict *d, int n);
 
 void dictPrintStats(dict *d);
 

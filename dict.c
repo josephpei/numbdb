@@ -337,7 +337,7 @@ static int _dictKeyIndex(dict *d, const void *key)
                 return -1;
             he = he->next;
         }
-        if (1) break;
+        if (!dictIsRehashing(d)) break;
     }
     return idx;
 }
