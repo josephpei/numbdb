@@ -42,7 +42,7 @@ flags = [
   '-fexceptions',
   '-ferror-limit=10000',
   '-DNDEBUG',
-  '-std=c99',
+  '-std=gnu99',
   '-xc',
   '-I.',
   '-I./include',
