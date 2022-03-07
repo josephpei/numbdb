@@ -7,54 +7,10 @@
 #include <time.h>
 #include <sys/types.h>
 
-#include "ae.h"
-#include "anet.h"
-#include "zmalloc.h"
+#include "numbdb.h"
 
 
-#define NUMBDB_OK 0
-#define NUMBDB_ERR -1
-
-#define NUMBDB_SERVERPORT 6378
-#define NUMBDB_IOBUF_LEN 1024
-
-#define LL_DEBUG 0
-#define LL_VERBOSE 1
-#define LL_NOTICE 2
-#define LL_WARNING 3
-
-#define LRU_BITS 24
-
-struct numbdbServer {
-    int port;
-    char *bindaddr;
-    int fd;
-    aeEventLoop *el;
-
-    int verbosity;
-    char *logfile;
-
-};
-
-typedef struct numbdbClient {
-    int fd;
-} numbdbClient;
-
-typedef struct redisObject {
-    unsigned type:4;
-    unsigned encoding:4;
-    unsigned lru:LRU_BITS;
-    int refcount;
-    void *ptr;
-} robj;
-
-static struct numbdbServer server;
-static void acceptHandler(aeEventLoop *el, int fd, void *privdata, int mask);
-static numbdbClient *createClient(int fd);
-static void readQueryFromClient(aeEventLoop *el, int fd, void *privdata, int mask);
-static void addReply(numbdbClient *c, robj *obj);
-static void sendReplyToClient(aeEventLoop *el, int fd, void *privdata, int mask);
-
+struct numbdbServer server;
 
 
 static void numbdbLog(int level, const char *fmt, ...)
@@ -97,7 +53,7 @@ static void initServer()
     aeCreateFileEvent(server.el, server.fd, AE_READABLE, acceptHandler, NULL);
 }
 
-static void acceptHandler(aeEventLoop *el, int fd, void *privdata, int mask)
+void acceptHandler(aeEventLoop *el, int fd, void *privdata, int mask)
 {
     int cport, cfd;
     char cip[128];
@@ -106,7 +62,7 @@ static void acceptHandler(aeEventLoop *el, int fd, void *privdata, int mask)
     createClient(cfd);
 }
 
-static numbdbClient *createClient(int fd)
+numbdbClient *createClient(int fd)
 {
     numbdbClient *c = zmalloc(sizeof(*c));
 
@@ -118,12 +74,12 @@ static numbdbClient *createClient(int fd)
     return c;
 }
 
-static void addReply(numbdbClient *c, robj *obj)
+void addReply(numbdbClient *c, robj *obj)
 {
     aeCreateFileEvent(server.el, c->fd, AE_WRITABLE, sendReplyToClient, c);
 }
 
-static void readQueryFromClient(aeEventLoop *el, int fd, void *privdata, int mask)
+void readQueryFromClient(aeEventLoop *el, int fd, void *privdata, int mask)
 {
     char buf[NUMBDB_IOBUF_LEN];
     int nread;
@@ -146,7 +102,7 @@ static void readQueryFromClient(aeEventLoop *el, int fd, void *privdata, int mas
     }
 }
 
-static void sendReplyToClient(aeEventLoop *el, int fd, void *privdata, int mask)
+void sendReplyToClient(aeEventLoop *el, int fd, void *privdata, int mask)
 {
     write(fd, privdata, strlen(privdata));
 }
